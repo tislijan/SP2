@@ -2,44 +2,41 @@
 \usepackage[utf8]{inputenc}
 
 \title{Analýza použití androidu}
-\author{}
+\author{Jan Tislický}
 
 \usepackage{booktabs}
 \usepackage{placeins}
+\usepackage{natbib}
 
 \begin{document}
 \maketitle
 \pagenumbering{gobble}
-\newpage
-%============================ vse k analyze je potreba pridat \usepackage tak jak je vyse
-\section*{Analýza použití androidu}
-\paragraph{} Výběr podporovaného androidu je založen na procentuelním zastoupení všech zařízení používajících tento systém. Dle dat získaných z oficiálních stránek je momentální procentuelní zastoupení následující:	(data přečtena k 10.10. 2018)
 
-\begin{table}[h]
-    \centering
-    \renewcommand{\tablename}{Tabulka}
-    \begin{tabular}{c|l|c}
-        \toprule
-        \textbf{Verze} & \textbf{Název} & \textbf{Zastoupení}\\
-        \midrule
-        4.4 & KitKat & 7.8\% \\
-        5.0 & Lollipop & 3.6\% \\
-        5.1 &  & 14.7\% \\
-        6.0 & Marshmallow & 21.6\% \\
-        7.0 & Nougat & 19.0\% \\
-        7.1 &  & 10.3\% \\
-        8.0 & Oreo & 13.4\% \\
-        8.1 &  & 5.8\% \\
-        \bottomrule
+\section{Analýza použití androidu}
+
+Výběr podporovaného androidu je založen na procentuelním zastoupení všech zařízení používajících tento systém a potřebné funkcionalitě systému. Dle dat získaných z oficiálních stránek \citep{distributionDashboard} je momentální procentuelní zastoupení následující: (data přečtena k 10.10. 2018)
+
+\begin{center}
+    \begin{tabular}{ | c | l | c|}
+        \hline
+        \textbf{Verze} & \textbf{Název} & \textbf{Zastoupení}\\ \hline
+        4.4 & KitKat & 7.8\% \\ \hline
+        5.0 & Lollipop & 3.6\% \\ \hline
+        5.1 &  & 14.7\% \\ \hline
+        6.0 & Marshmallow & 21.6\% \\ \hline
+        7.0 & Nougat & 19.0\% \\ \hline
+        7.1 &  & 10.3\% \\ \hline
+        8.0 & Oreo & 13.4\% \\ \hline
+        8.1 &  & 5.8\% \\ \hline
     \end{tabular}
-    \caption{Procentuální zastoupení androidu}
-    \label{Tabulka}
-\end{table}
+\end{center}
 
-\paragraph{} Tabulka výše pokrývá 96.2 \% všech zařízení. Toto procentuální pokrytí je více než dostačující, jak toto číslo vypovídá nebude problém nasadit aplikaci na drtivé většině zařízení, která jsou stále v oběhu. Starší verze androidu nebudou podporovány, hlavní důvod je výše zmíněné pokrytí, dalším důvodem je možný nedostatek starší verze systému. Ten může postrádat některé důležité funkcionality, které budou potřeba pro některé hry, případně celou aplikaci. Jako příklad uvedeme podporu animací, špatné vykreslování 2D grafiky, možná nestabilita starších verzí systému, ... .
+Tabulka výše pokrývá 96.2 \% všech zařízení, doporučené procentuelní pokrytí je zhruba 70 \% zařízení. Zde se dá diskutovat o tom, na jaké API úrovni začít a tím změnit pokrytí všech zařízení. Android verze 4.4 KitKat je úroveň 19, nejnovější úroveň je 27. Což nám dává pokrytí 8 úrovní. Výběr by bylo možné změnit na API úroveň 21 nebo 22, android Lollipop 5.0 a 5.1, zde bychom ztratili přibližně 10 \% zařízení. Při celkovém počtu zařízení používajících android by toto nebylo malé množství.
 
-\paragraph{} Ze všech informací, které byli získány pomocí oficiálních stránek androidu, případně ověřena na těchto stránkách byl vybrán android KitKat (verze 4.4) jako poslední podporovaný systém. 
+Jak procentuelní pokrytí zařízení vypovídá, nebude problém nasadit aplikaci na drtivé většině zařízení, která jsou stále v oběhu. Starší verze androidu nebudou podporovány, hlavní důvod je výše zmíněné pokrytí, dalším důvodem je možný nedostatek starší verze systému. Ten může postrádat některé důležité funkcionality, které budou potřeba pro některé hry, případně celou aplikaci. Jako příklad uvedeme podporu animací, špatné vykreslování 2D grafiky, možná nestabilita starších verzí systému, ... \citep{versionCompare}.
 
-%====================================================== konec textu
+\section{Závěr} Ze všech informací, které byli získány pomocí oficiálních stránek androidu, případně ověřena na těchto stránkách, byl vybrán android KitKat (verze 4.4) jako poslední podporovaná verze. 
 
+\bibliographystyle{plain}
+\bibliography{references}
 \end{document}
